@@ -36,9 +36,9 @@ def main(examples_dir: str, output_dir: str = None, task_name: str = None):
 
 
     # Select examples based on clean data
-    audio_files = glob.glob(f'{examples_dir}/{task_name}*_70percent.wav')
+    audio_files = glob.glob(f'{examples_dir}/{task_name}*_original.wav')
 
-    example_names = [os.path.basename(f).replace('_70percent.wav', '') for f in audio_files]
+    example_names = [os.path.basename(f).replace('_original.wav', '') for f in audio_files]
 
     code = []
 
@@ -53,16 +53,11 @@ def main(examples_dir: str, output_dir: str = None, task_name: str = None):
         # clean, noisy
         e_code.append(f'<p><h3>{e_name_base}</h3></p>\n')
         e_code.append('<div class="row">\n')
-        e_code += code_for_tags(e_name=e_name, tags=['70percent', '100percent', '130percent'])
+        e_code += code_for_tags(e_name=e_name, tags=['original', 'auto-regressive', 'discrete-diffusion'])
         e_code.append('</div>\n')
 
         e_code.append('<br>\n')
 
-
-        # SB
-        # e_code.append('<div class="row">\n')
-        # e_code += code_for_tags(e_name=e_name, tags=['Proposed_spk1', 'Proposed_spk2'])
-        # e_code.append('</div>\n')
 
         code += e_code
 
@@ -73,7 +68,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--examples-dir', required=True, type=str, help='Data directory')
     parser.add_argument('--output-dir', required=False, type=str, help='Output directory')
-    parser.add_argument('--task-name', default="n_different_length_comparison", type=str, help='Name of the task (dataset)')
+    parser.add_argument('--task-name', default="n_AR_DD_Comparison", type=str, help='Name of the task (dataset)')
     args = parser.parse_args()
 
     main(examples_dir=args.examples_dir, output_dir=args.output_dir, task_name=args.task_name)

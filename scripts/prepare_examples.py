@@ -10,18 +10,20 @@ SETUPS = {
         'auto-regressive': 'ar',
         'discrete-diffusion': 'dd_50steps',
     },
-    # 'different_num_steps_comparison': {
-    #     '1steps': 'dd_1steps',
-    #     '10steps': 'dd_10steps',
-    #     '25steps': 'dd_25steps',
-    #     '50steps': 'dd_50steps',
-    #     '100steps': 'dd_100steps',
-    # },
-    # 'different_length_comparison': {
-    #     '70percent': 'dd_length0.7',
-    #     '100percent': 'dd_50steps',
-    #     '130percent': 'dd_length1.3',
-    # },
+    'different_num_steps_comparison': {
+        'original': 'org_speech',
+        '1steps': 'dd_1steps',
+        '10steps': 'dd_10steps',
+        '25steps': 'dd_25steps',
+        '50steps': 'dd_50steps',
+        '100steps': 'dd_100steps',
+    },
+    'different_length_comparison': {
+        'original': 'org_speech',
+        '70percent': 'dd_length0.7',
+        '100percent': 'dd_50steps',
+        '130percent': 'dd_length1.3',
+    },
 }
 
 
