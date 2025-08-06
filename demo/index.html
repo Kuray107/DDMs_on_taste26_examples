@@ -17,9 +17,9 @@
 			<nav id="nav">
 				<ul class="container">
 					<li><a href="#top">Top</a></li>
-					<li><a href="#Comparison_between_auto-regressive_and_discrete-diffusion">Comparison between auto-regressive and discrete-diffusion</a></li>
-					<li><a href="#Comparison_of_different_number_of_inference_steps">Comparison of different number of inference steps</a></li>
-					<li><a href="#Comparison_of_different_inference_lengths_for_DDMs">Comparison of different inference lengths for DDMs</a></li>
+					<li><a href="#Comparison_between_auto-regressive_and_discrete-diffusion">AR v.s. DDM</a></li>
+					<li><a href="#Comparison_of_different_number_of_inference_steps">Different # inference steps for DDM</a></li>
+					<li><a href="#Comparison_of_different_inference_lengths_for_DDMs">Different inference lengths for DDM</a></li>
 				</ul>
 			</nav>
 
@@ -31,7 +31,8 @@
 							<h2>Audio Examples</h2>
 						</header>
 					</div>
-					<p>Audio examples for a submission to ICASSP 2026: Generative Speech Foundation Model Pretraining for High-Quality Speech Extraction and Restoration</p>
+					<p>Audio examples for a submission to ICASSP 2026: Generative Modeling of Text-Aligned Speech Tokens via Discrete Diffusion</p>
+					<p>All audio examples are randomly selected from the librispeech test-clean set.</p>
 				</div>
 			</article>
 
@@ -39,8 +40,8 @@
 			<article id="Comparison_between_auto-regressive_and_discrete-diffusion" class="wrapper style2">
 				<div class="container">
 					<header>
-						<h2>Comparison between auto-regressive and discrete-diffusion</h2>
-						<p>Randomly-selected test examples from the librispeech test-clean set.</p>
+						<h2>Comparison between auto-regressive and discrete-diffusion models</h2>
+						<p>For DDMs, we use the ancestral-conf-top-k sampler with 50 inference steps.</p>
 					</header>
 					<!-- Insert examples ⬇️ -->
 					<p><h3>8455-210777-0066</h3></p>
@@ -192,7 +193,6 @@
 			<div class="container">
 				<header>
 					<h2>Comparison of different number of inference steps</h2>
-					<p>Randomly-selected test examples from the librispeech test-clean set.</p>
 				</header>
 				<!-- Insert examples ⬇️ -->
 				<p><h3>260-123286-0004</h3></p>
@@ -464,7 +464,6 @@
 			<div class="container">
 				<header>
 					<h2>Comparison of different inference lengths for DDMs</h2>
-					<p>Randomly-selected test examples from the librispeech test-clean set.</p>
 				</header>
 				<!-- Insert examples ⬇️ -->
 				<p><h3>908-31957-0006</h3></p>
